@@ -55,7 +55,7 @@
         [httpClient setParameterEncoding:AFJSONParameterEncoding];
         NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:username, @"username", message, @"message", [NSNumber numberWithDouble:location.coordinate.latitude], @"lat", [NSNumber numberWithDouble:location.coordinate.longitude], @"lng", nil];
         NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
-                                                                path:@"/locationcather/rest/catch"
+                                                                path:@"/locationcatcher/rest/catch"
                                                           parameters:params];
         [request setValue:[NSString stringWithFormat:@"application/json"] forHTTPHeaderField:@"Accept"];
         AFHTTPRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
