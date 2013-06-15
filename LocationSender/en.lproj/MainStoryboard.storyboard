@@ -14,7 +14,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="deh-AB-89m">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="339" id="cM2-mc-7sR"/>
+                                    <constraint firstAttribute="height" constant="254" id="P6J-Ep-TRu"/>
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qao-m3-yYL">

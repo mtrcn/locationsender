@@ -50,12 +50,12 @@
     NSString* message = [_txtMessage text];
     if ([username length] > 0 && [message length] > 0 && location != nil){
         _btnSend.enabled = FALSE;
-        NSURL *url = [NSURL URLWithString:@"http://localhost:8080"];
+        NSURL *url = [NSURL URLWithString:@"http://locationcatcher.eu01.aws.af.cm"];
         AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
         [httpClient setParameterEncoding:AFJSONParameterEncoding];
         NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:username, @"username", message, @"message", [NSNumber numberWithDouble:location.coordinate.latitude], @"lat", [NSNumber numberWithDouble:location.coordinate.longitude], @"lng", nil];
         NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
-                                                                path:@"/locationcatcher/rest/catch"
+                                                                path:@"/rest/catch"
                                                           parameters:params];
         [request setValue:[NSString stringWithFormat:@"application/json"] forHTTPHeaderField:@"Accept"];
         AFHTTPRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {

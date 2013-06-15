@@ -370,6 +370,7 @@
 				FB7CF1D517369A0F00DD222B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
